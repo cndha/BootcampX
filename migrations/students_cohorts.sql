@@ -7,12 +7,12 @@ CREATE TABLE cohorts (
 
 CREATE TABLE students (
   id SERIAL PRIMARY KEY NOT NULL, 
-  name VARCHAR(225) NOT NULL,
+  name VARCHAR(225) NOT NULL, 
   email VARCHAR(225),
   phone VARCHAR(32),
   github VARCHAR(225),
   start_date DATE,
   end_date DATE,
-  cohorts_id INTEGER REFERENCES cohorts(id) ON DELETE CASCADE
+  cohort_id INTEGER REFERENCES cohorts(id) ON DELETE CASCADE
 );
 
